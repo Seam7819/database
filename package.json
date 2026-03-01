@@ -1,0 +1,21 @@
+{
+  "name": "rdbms_rokcstar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seam7819/database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Seam7819/database/issues"
+  },
+  "homepage": "https://github.com/Seam7819/database#readme"
+}
