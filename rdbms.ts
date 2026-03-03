@@ -11,3 +11,12 @@
 //     name VARCHAR(50),
 //     email VARCHAR(100)
 // );
+
+// create table students(
+//   id serial,
+//   name varchar(50) not null,
+//   email varchar(20) not null,
+//   phNumber int,
+//   isActive boolean,
+//   unique(email)
+// )
