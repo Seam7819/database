@@ -26,4 +26,13 @@ unique(email,name)
 -- single row insert
 insert into products(products_name,product_description,price) values('watch', 'this is very high quality', 100);
 
+-- multi row insert
+insert into 
+  products(products_name,product_description,price) 
+  values
+  ('apple', 'this is very high quality', 100),
+  ('table', 'this is very high quality', 100),
+  ('chair', 'this is very high quality', 100),
+  ('iph', 'this is very high quality', 100);
+
 */
