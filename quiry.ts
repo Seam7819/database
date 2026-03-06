@@ -35,4 +35,45 @@ insert into
   ('chair', 'this is very high quality', 100),
   ('iph', 'this is very high quality', 100);
 
+//   Alter
+rename data , modify data, drop/create data,etc
+
+-- rename table with alter
+alter table empolyees rename to employee;
+
+-- add a column
+alter table employee 
+add column email varchar(50);
+
+drop/delete a table column
+alter table employee 
+drop column email;
+
+-- renaming a column name 
+alter table employee 
+rename column name to user_name;
+
+-- modify constraint 
+alter table employee 
+alter column user_name type varchar(30);
+
+-- add constraint
+alter table employee
+alter column email set not null;
+
+-- drop constraint 
+alter table employee
+alter column email drop not null;
+
+select * from products where price is not null 
+
+-- select * from products where price is not null 
+
+select * from products where price is null
+select coalesce(price, 0) from products
+
+limit and offset
+elect * from products limit 5 offset 5*0
+select * from products limit 5 offset 5*1
+select * from products limit 5 offset 5*2
 */
