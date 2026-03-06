@@ -76,4 +76,14 @@ limit and offset
 elect * from products limit 5 offset 5*0
 select * from products limit 5 offset 5*1
 select * from products limit 5 offset 5*2
+
+update : 
+update products 
+set price = 500, products_name = 'watche'
+where products_id = 4
+
+update multiple :
+update products 
+set products_name = 'clock', price = 1200
+where products_id in(1,2,3)
 */
