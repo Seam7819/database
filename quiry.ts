@@ -99,5 +99,25 @@ group by products_name
 number of products
   select products_name, count(*) from products group by products_name
 
+  -- courses more then 4 students
+select price, count(*) from products group by price
+having count(*) > 5
+
+select price, count(*), avg(price) from products group by price having count(*) >6 and avg(price) > 500
+
+foreign key
+create table users(
+  id serial primary key,
+  user_name varchar(50)
+)
+
+create table post(
+  id serial primary key,
+  title text,
+  user_id int references users(id)
+)
+
+insert into users(user_name) values('uddin');
+insert into post(title, user_id) values('need a break', 2);
 
 */
