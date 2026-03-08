@@ -86,4 +86,18 @@ update multiple :
 update products 
 set products_name = 'clock', price = 1200
 where products_id in(1,2,3)
+
+  delete from products where price = 900
+
+group by:
+select price from products 
+group by price
+
+select products_name, avg(price) from products 
+group by products_name
+
+number of products
+  select products_name, count(*) from products group by products_name
+
+
 */
