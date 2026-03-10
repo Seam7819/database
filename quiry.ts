@@ -120,4 +120,10 @@ create table post(
 insert into users(user_name) values('uddin');
 insert into post(title, user_id) values('need a break', 2);
 
+join 2 table and get data 
+select title, user_name from post join users on post.user_id = users.id
+
+select p.id, title, user_name from post as p join users as u on p.user_id = u.id
+
+
 */
