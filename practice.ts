@@ -87,4 +87,41 @@ inner join departments using(department_id) group by department_name order by av
 -- count empolyees hired each year
 select extract(year from hire_date) as hired_date, count(*) from employees group by hired_date
 
+-- sub quiries
+create table employee (
+  id serial primary key,
+  employee_name varchar(50),
+  employee_salary decimal(10,2),
+  department varchar(30)
+);
+ALTER TABLE employee
+ALTER COLUMN employee_salary TYPE decimal(10,2);
+
+insert into employee (employee_name, employee_salary, department) values
+('John Smith', 45000.50, 'HR'),
+('Alice Johnson', 52000.75, 'Finance'),
+('Michael Brown', 60000.00, 'IT'),
+('David Wilson', 47000.20, 'Marketing'),
+('Emma Davis', 55000.90, 'Sales'),
+('Daniel Taylor', 48000.60, 'IT'),
+('Sophia Martinez', 62000.40, 'Finance'),
+('James Anderson', 51000.30, 'HR'),
+('Olivia Thomas', 53000.80, 'Marketing'),
+('William Jackson', 70000.00, 'Management');
+-- find the highest salay
+select max(employee_salary) from employee 
+-- find which employee get the highest
+
+select * from employee where employee_salary= (select max(employee_salary) from employee)
+
+create procedure del_emp_byid(emp_id int)
+language plpgsql
+as
+$$
+  begin
+  delete from employee where id = emp_id;
+  end
+$$
+call del_emp_byid(10)
+
  */
